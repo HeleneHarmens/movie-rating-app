@@ -11,35 +11,55 @@ class MovieOverview extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-          data: [],
+          info: [],
         };
       }
       componentDidMount() {
         fetch(API + DATA)
           .then(response => response.json())
-          .then(data => this.setState({ data: data }));
+          .then(data => this.setState({ info: data }));
       }
 
     render() {
 
-        const { data } = this.state;
+        const { info } = this.state;
+        
 
         return (
             <React.Fragment>
                 <Navigationbar></Navigationbar>
-                <p>Titles</p>
-
-                <ul>
-                    {data.map(dat =>
-                    <li key={dat.objectID}>
-                        {dat.title}
+                <div className="Overview d-flex flex-row " id="genres">
+ 
+                <ul className="w-100">
+                    {info.map(movie =>
+                    <li key={movie.id} className="list-group-item d-flex justify-content-left">
+                        <div id="poster">
+                            <img src={movie.posterurl} alt="Posterimage"></img>
+                        </div>
+                        
+                        <div>
+                            <h3>{movie.title} ({movie.year})</h3>
+                            Rating: <b>{getAvg(movie.ratings)}</b>
+                        </div>
+                        
                     </li>
                     )}
-                </ul>                
+                </ul> 
+                </div>
+                               
                 
             </React.Fragment >
         )
     }
+}
+
+function getAvg(ratings) {
+    var avg = ratings.reduce( (a,b) => a + b) / ratings.length;
+    return avg.toFixed(2);
+}
+
+function hello() {
+    return console.log("Helo!");
 }
 
 export default MovieOverview;
