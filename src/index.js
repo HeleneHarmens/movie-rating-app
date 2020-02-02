@@ -4,7 +4,7 @@ import { Route, BrowserRouter as Router } from 'react-router-dom'
 import './index.css';
 import App from './App';
 import MovieOverview from './pages/movieoverview'
-
+import MovieDetails from './pages/moviedetails'
 import * as serviceWorker from './serviceWorker';
 
 import 'bootstrap/dist/css/bootstrap.css';
@@ -17,7 +17,8 @@ const routing = (
     <Router>
       <div>
         <Route exact path="/" component={App} />
-        <Route path="/overview" component={MovieOverview} />
+        <Route exact path="/titles" component={MovieOverview} />
+        <Route path="/titles/:id" component={MovieDetails} />
       </div>
     </Router>
 

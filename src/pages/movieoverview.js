@@ -5,6 +5,7 @@ import Navigationbar from "../components/navbar"
 
 const API = 'http://localhost:3000/';
 const DATA = 'data';
+const TITLES = '/titles/'
 
 class MovieOverview extends React.Component {
 
@@ -38,8 +39,8 @@ class MovieOverview extends React.Component {
                         </div>
                         
                         <div>
-                            <h3>{movie.title} ({movie.year})</h3>
-                            Rating: <b>{getAvg(movie.ratings)}</b>
+                            <h3><a href={TITLES + movie.id}>{movie.title} ({movie.year})</a></h3>
+                            <h5>Rating: <b>{getAvg(movie.ratings)}</b></h5>
                         </div>
                         
                     </li>

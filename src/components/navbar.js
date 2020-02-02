@@ -6,7 +6,6 @@ import './navbar.css';
 
 class Navigationbar extends React.Component {
 
-
     render() {
 
         return (
@@ -20,7 +19,7 @@ class Navigationbar extends React.Component {
                     <Navbar.Brand href="#home"></Navbar.Brand>
                     <Nav className="mr-auto">
                         <NavLink exact activeClassName="active" className="btn nav" activeStyle={{ color: 'white' }} to="/">Home</NavLink>
-                        <NavLink exact activeClassName="active" className="btn nav" activeStyle={{ color: 'white' }} to="/overview">MovieOverview</NavLink>
+                        <NavLink exact activeClassName="active" className="btn nav" activeStyle={{ color: 'white' }} to="/titles">MovieOverview</NavLink>
                     </Nav>
 
                     <Navbar.Text>
@@ -31,7 +30,6 @@ class Navigationbar extends React.Component {
             </>
         )
     }
-
 }
 
 export default Navigationbar;

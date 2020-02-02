@@ -13,7 +13,7 @@ class App extends Component {
         <Navigationbar></Navigationbar>
         <Router>
           <Route exact path="/" component={Home} />
-          <Route path="/overview" component={MovieOverview} />
+          {/* <Route path="/titles" component={MovieOverview} /> */}
         </Router>
       
       </div>
