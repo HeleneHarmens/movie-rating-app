@@ -1,0 +1,10 @@
+.nav {
+    color: lightgrey;
+}
+.nav:hover {
+    color: rgb(90, 192, 226);
+}
+
+.topNavTitle {
+    height: 200px;
+}
