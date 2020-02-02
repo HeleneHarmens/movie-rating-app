@@ -1,5 +1,12 @@
 # MovieRatingApp
-Movie Rating Application
+Movie Rating Application (WIP)
+
+## TODO (Missing tasks in this application):  
+- Divide code more into components/views
+- Be able to sort the list based on the data displayed in the overview element.
+- Favorite a movie and filter the list so that only favorites are displayed.
+- Add tests
+- Reuse css
 
 
 ## Running The Server
@@ -18,15 +25,14 @@ http://localhost:3000/data/3
 To **filter the data for all movies with contentRating=”PG13”** use the following endpoint.  
 http://localhost:3000/data?contentRating=PG-13
 
-## HTTP Endpoints
+## Install modules
+
+In the project directory, run:
+
 ```
-GET    /data
-GET    /data/{id}
-POST   /data
-PUT    /data/{id}
-PATCH  /data/{id}
-DELETE /data/{id}
+$ npm install
 ```
+
 
 ## Run the app
 
