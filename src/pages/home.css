@@ -1,0 +1,8 @@
+.Home {
+    margin: 0px;
+    padding: 25px;
+    background-color: lightgray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    width: 100%;
+}

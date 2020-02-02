@@ -6,5 +6,13 @@
 }
 
 .topNavTitle {
-    height: 200px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 800;
+    letter-spacing: -3px;
+    line-height: 1;
+    text-shadow: gray 3px 2px 0;
+    position: relative;
 }

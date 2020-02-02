@@ -12,7 +12,6 @@ class MovieDetails extends React.Component {
         super(props);
         this.state = {
           info: [],
-          genreslist: [],
         };
       }
       componentDidMount() {
@@ -20,46 +19,40 @@ class MovieDetails extends React.Component {
         fetch(API + DATA + params.id)
           .then(response => response.json())
           .then(data => this.setState({ info: data }));
-
-        fetch(API + DATA + params.id)
-          .then(response => response.json())
-          .then(data => this.setState({ genreslist: data }));
       }
 
     render() {
         
-        const { info, genreslist } = this.state;
+        const { info } = this.state;
 
         return (
             <React.Fragment>
                 <Navigationbar></Navigationbar>
-                <div className="Details d-flex flex-row h-100" id="genres">
+
+                {/* TODO: Make into a component! */}
+                <div className="Details d-flex flex-row h-100">
                     <div className="list-group-item d-flex justify-content-left w-100">
-                    <div id="posterDetails">
+                        {/* MOVIE POSTER IMAGE */}
+                        <div id="posterDetails">
                             <img src={info.posterurl} alt="Posterimage"></img>
                         </div>
-                        
+                        {/* MOVIE INFO */}
+                        {/* TODO: 
+                            - Use function to get average of ratings
+                            - Create function to divide genres and actors by comma
+                        */}
                         <div id="movieDetails">
                             <h2><b>{info.title} ({info.year})</b></h2>
                             <h5><b>Rating:</b> {info.ratings}</h5>
                             <h6><b>Genre:</b> {info.genres}</h6><br/>
                             <p>{info.storyline}</p>
                             <p><b>Actors:</b> {info.actors}</p>
-
                         </div>
-                    </div>
-                        
+                    </div> 
                 </div>
-                               
-                
             </React.Fragment >
         )
     }
-}
-
-function getAvg(ratings) {
-    var avg = ratings.reduce( (a,b) => a + b) / ratings.length;
-    return avg.toFixed(2);
 }
 
 export default MovieDetails;

@@ -1,11 +1,8 @@
 .Overview {
-    margin: 10px;
+    margin: 0px;
+    padding: 25px;
     background-color: lightgray;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-direction: row;
-    height: 75vh;
-    width: 97vw;
 }
 
 .Overview img {

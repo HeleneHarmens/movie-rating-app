@@ -9,24 +9,22 @@ class Navigationbar extends React.Component {
     render() {
 
         return (
-
             <>
                 <header className="App-header">
-                    <h1 id="topNavTitle">Movie Rating Application</h1>
+                    <h1 className="topNavTitle">Movie Rating Application</h1>
                 </header>
                 <Navbar bg="dark" variant="dark">
                     
                     <Navbar.Brand href="#home"></Navbar.Brand>
                     <Nav className="mr-auto">
                         <NavLink exact activeClassName="active" className="btn nav" activeStyle={{ color: 'white' }} to="/">Home</NavLink>
-                        <NavLink exact activeClassName="active" className="btn nav" activeStyle={{ color: 'white' }} to="/titles">MovieOverview</NavLink>
+                        <NavLink exact activeClassName="active" className="btn nav" activeStyle={{ color: 'white' }} to="/titles">Movie Overview</NavLink>
                     </Nav>
 
                     <Navbar.Text>
                         - Helene H. Harmens
                     </Navbar.Text>  
                 </Navbar>
-
             </>
         )
     }

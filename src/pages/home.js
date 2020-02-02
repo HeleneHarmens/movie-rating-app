@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import './home.css';
 
-
-
-
 class Home extends Component {
     state = {
     }
@@ -11,10 +8,8 @@ class Home extends Component {
     render() {
         return (
             <React.Fragment>
-
-                <div id="home">
-
-                    <h2>Welcome!</h2>
+                <div className="Home h-100">
+                    <h3>See overview over movies <a href="/titles">HERE</a></h3>
                 </div >
             </React.Fragment>
         );
@@ -22,4 +17,3 @@ class Home extends Component {
 }
 
 export default Home;
-
