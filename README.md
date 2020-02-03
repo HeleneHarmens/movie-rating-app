@@ -1,12 +1,12 @@
 # MovieRatingApp
-Movie Rating Application (WIP)
+Movie Rating Application (WIP / Unfinished)
 
 ## TODO (Missing tasks in this application):  
 - Divide code more into components/views
 - Be able to sort the list based on the data displayed in the overview element.
 - Favorite a movie and filter the list so that only favorites are displayed.
 - Add tests
-- Reuse css
+- Reuse css, and other improvements
 
 
 ## Running The Server
@@ -41,9 +41,12 @@ In the project directory, you can run:
 ```
 $ npm start
 ```
+**Note:** You might get the promt:  
+`? Something is already running on port 3000 [...] Would you like to run the app on another port instead? (Y/n)`
+Type Y, and it will run on port 3001 (or something else).
 
 **Runs the app in the development mode.**<br />
-Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
+Open [http://localhost:3001](http://localhost:3001) to view it in the browser (change port if it's running on another port).
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
@@ -56,6 +59,7 @@ In the project directory, you can run:
 ```
 $ npm test
 ```
+**Note: No tests available yet**
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
